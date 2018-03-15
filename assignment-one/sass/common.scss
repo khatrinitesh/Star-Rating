@@ -1,0 +1,60 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li{
+		display: inline-block;
+		position: relative;
+	}
+}
+
+form{
+	&.star_rating{
+		width: 300px;
+		input{
+			display: none;
+			&:checked
+			+
+			label{
+				&:hover{
+					color:blue;
+				}
+			}
+			&:not(:checked)
+			+
+			label{
+				&:hover{
+					color:blue;
+					~
+					label{
+						color:blue;
+					}
+				}
+			}
+		}
+		label{
+			float: right;
+			position: relative;
+			color:orange;
+			&:before{
+				content:"\f005";
+				font-family: fontawesome;
+				font-size: 20px;
+			}
+			&.half{
+				&:before{
+					content:"\f089";
+					position: absolute;
+				}
+			}
+		}
+	}
+}

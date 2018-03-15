@@ -1,0 +1,65 @@
+/* line 1, ../sass/common.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/common.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 13, ../sass/common.scss */
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 20, ../sass/common.scss */
+form.star_rating {
+  width: 300px;
+}
+/* line 22, ../sass/common.scss */
+form.star_rating input {
+  display: none;
+}
+/* line 27, ../sass/common.scss */
+form.star_rating input:checked
++
+label:hover {
+  color: blue;
+}
+/* line 34, ../sass/common.scss */
+form.star_rating input:not(:checked)
++
+label:hover {
+  color: blue;
+}
+/* line 36, ../sass/common.scss */
+form.star_rating input:not(:checked)
++
+label:hover ~
+label {
+  color: blue;
+}
+/* line 43, ../sass/common.scss */
+form.star_rating label {
+  float: right;
+  position: relative;
+  color: orange;
+}
+/* line 47, ../sass/common.scss */
+form.star_rating label:before {
+  content: "\f005";
+  font-family: fontawesome;
+  font-size: 20px;
+}
+/* line 53, ../sass/common.scss */
+form.star_rating label.half:before {
+  content: "\f089";
+  position: absolute;
+}
